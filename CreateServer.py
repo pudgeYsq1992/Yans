@@ -90,7 +90,7 @@ def create_app(strD):
         InputX[0][4] = strD[4]
         InputX[0][5] = strD[5]   
         InputX[0][6] = strD[6] 
-        print("x :"
+        print("x :")
         print(InputX)
         
         predict_output = sess.run(y,{x:InputX})
