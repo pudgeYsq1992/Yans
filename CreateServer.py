@@ -90,18 +90,18 @@ def create_app(strD):
         InputX[0][4] = strD[4]
         InputX[0][5] = strD[5]   
         InputX[0][6] = strD[6] 
-        print("x :")
-        print(InputX)
+        #print("x :")
+        #print(InputX)
         
         predict_output = sess.run(y,{x:InputX})
-        print("predict_output :")
-        print(predict_output)
+        #print("predict_output :")
+        #print(predict_output)
         predict_outputInt = tf.round(predict_output)
-        print("predict_outputInt :")
-        print(predict_outputInt)
+        #print("predict_outputInt :")
+        #print(predict_outputInt)
         output_num = outputByChinese(predict_outputInt,sess)
-        print("output_num:")
-        print(output_num)
+        #print("output_num:")
+        #print(output_num)
         
     if output_num == 0:
         return json.dumps(

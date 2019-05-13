@@ -105,12 +105,12 @@ y_ = tf.placeholder(tf.float32, shape = (None, 5), name = 'y-input')
 
 #使用随机数填满数组
 rdm = RandomState(1)
-dataset_size = 100
+dataset_size = 110
 X = rdm.rand(dataset_size,INPUT_NODE_NUM)
 
 #读取数据写入数组
 #X为训练数据
-for i in range(0,100):
+for i in range(0,110):
     #X[i][0] = i
     '''
     if (i%2 == 0):
@@ -144,7 +144,7 @@ for i in range(0,100):
 print(Y)
 
 '''
-for i in range(0,100):
+for i in range(0,110):
     temp = []
     label = stringToNum(workbook.sheets()[0].cell(i+2,8).value)
     if label == 0:
