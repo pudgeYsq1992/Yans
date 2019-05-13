@@ -90,8 +90,16 @@ def create_app(strD):
         InputX[0][4] = strD[4]
         InputX[0][5] = strD[5]   
         InputX[0][6] = strD[6] 
+        printf("InputX[0][0]"+InputX[0][0])
+        printf("InputX[0][1]"+InputX[0][1])
+        printf("InputX[0][2]"+InputX[0][2])
+        printf("InputX[0][3]"+InputX[0][3])
+        printf("InputX[0][4]"+InputX[0][4])
+        printf("InputX[0][5]"+InputX[0][5])
+        printf("InputX[0][6]"+InputX[0][6])
         predict_output = sess.run(y,{x:InputX})
         predict_outputInt = tf.round(predict_output)
+        printf("output_num"+output_num)
         output_num = outputByChinese(predict_outputInt,sess)
    
     if output_num == 0:
@@ -118,9 +126,9 @@ def create_app(strD):
             'I am very interested in it,please contact me with 15365180821'
         )
 
-    return json.dumps({
-         'ok,something wrong with URL':predict_outputInt
-    })
+    return json.dumps(
+         'I am not sure, please change condition and try again'
+    )
    
 
 @app.route('/signin' , methods=['GET'])
