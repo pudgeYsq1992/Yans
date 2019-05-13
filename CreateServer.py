@@ -101,7 +101,7 @@ def create_app(strD):
         print(predict_outputInt)
         output_num = outputByChinese(predict_outputInt,sess)
         print("output_num:")
-        print(+output_num)
+        print(output_num)
         
     if output_num == 0:
         return json.dumps(
