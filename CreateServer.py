@@ -119,7 +119,7 @@ def create_app(strD):
         )
 
     return json.dumps({
-         'ok,something wrong with URL':output_num
+         'ok,something wrong with URL':predict_outputInt
     })
    
 
