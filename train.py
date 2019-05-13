@@ -95,7 +95,7 @@ INPUT_NODE_NUM = 7
 w1 = tf.Variable(tf.random_normal([INPUT_NODE_NUM,16],stddev = 1))			 
 w2 = tf.Variable(tf.random_normal([16,16],stddev = 1))				 
 w3 = tf.Variable(tf.random_normal([16,5],stddev = 1))				 
-w4 = tf.Variable(tf.random_normal([3,1],stddev = 1))
+#w4 = tf.Variable(tf.random_normal([3,1],stddev = 1))
 
 biases = tf.Variable(tf.zeros([2]))
 biases2 = tf.Variable(tf.zeros([3]))

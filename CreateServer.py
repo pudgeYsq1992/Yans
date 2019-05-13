@@ -96,26 +96,26 @@ def create_app(strD):
    
     if output_num == 0:
         return json.dumps(
-            'You don\'t want to go to this place at all'
+            'I don\'t want to go to this place at all'
         )
     if output_num == 1:
         return json.dumps(
-            'well,you just don\'t like there'
+            'well,I just don\'t like there'
         )
 
     if output_num == 2:
         return json.dumps(
-            'Just so so, you will go if some one ask you to'
+            'Just so so, Would you like to send an e-mail to explain the detail? 310244098@qq.com'
         )
 
     if output_num == 3:
         return json.dumps(
-            'You want to be there very much'
+            'It\'s a good oppotunity,contact me with 15365180821'
         )
 
     if output_num == 4:
         return json.dumps(
-            'You will be there at any cost'
+            'I am very interested in it,please contact me with 15365180821'
         )
 
     return json.dumps(
