@@ -20,7 +20,7 @@ def stringToNum(s):
         return 1
     if s == '日本':
         return 2
-    if s == '其他':
+    if s == '其他地点':
         return 3    
     if s == '技术研究员':
         return 0
@@ -28,7 +28,7 @@ def stringToNum(s):
         return 1
     if s == '产品经理':
         return 2
-    if s == '其他':
+    if s == '其他职位':
         return 3
     if s == '996':
         return 0 

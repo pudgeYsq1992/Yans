@@ -31,7 +31,7 @@ def genRanddata(worksheet):
         if randomData == 2:
             worksheet.write(i,1,'日本')
         if randomData == 3:
-            worksheet.write(i,1,'其他')
+            worksheet.write(i,1,'其他地点')
     #生成“工作内容”一列   
     for i in range(2,101):
         randomData = random.randint(0,3)
@@ -42,7 +42,7 @@ def genRanddata(worksheet):
         if randomData == 2:
             worksheet.write(i,2,'产品经理')
         if randomData == 3:
-            worksheet.write(i,2,'其他')
+            worksheet.write(i,2,'其他职位')
     #生成“工作时长”一列   
     for i in range(2,101):
         randomData = random.randint(0,2)
