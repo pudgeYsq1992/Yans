@@ -92,9 +92,9 @@ workbook = xlrd.open_workbook("偏好数据/标注数据.xls")
 
 #构建 待训练模型
 INPUT_NODE_NUM = 7
-w1 = tf.Variable(tf.random_normal([INPUT_NODE_NUM,16],stddev = 1))			 
-w2 = tf.Variable(tf.random_normal([16,16],stddev = 1))				 
-w3 = tf.Variable(tf.random_normal([16,5],stddev = 1))				 
+w1 = tf.Variable(tf.random_normal([INPUT_NODE_NUM,20],stddev = 1))			 
+w2 = tf.Variable(tf.random_normal([20,20],stddev = 1))				 
+w3 = tf.Variable(tf.random_normal([20,5],stddev = 1))				 
 #w4 = tf.Variable(tf.random_normal([3,1],stddev = 1))
 
 biases = tf.Variable(tf.zeros([2]))

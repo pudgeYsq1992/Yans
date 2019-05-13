@@ -52,9 +52,9 @@ def create_app(strD):
     rdm = RandomState(1)
     dataset_size = 101
 
-    w1 = tf.Variable(tf.random_normal([INPUT_NODE_NUM,16],stddev = 1))                       
-    w2 = tf.Variable(tf.random_normal([16,16],stddev = 1))                           
-    w3 = tf.Variable(tf.random_normal([16,5],stddev = 1))                            
+    w1 = tf.Variable(tf.random_normal([INPUT_NODE_NUM,20],stddev = 1))                       
+    w2 = tf.Variable(tf.random_normal([20,20],stddev = 1))                           
+    w3 = tf.Variable(tf.random_normal([20,5],stddev = 1))                            
     #w4 = tf.Variable(tf.random_normal([3,1],stddev = 1))
     saver = tf.train.Saver() 
     x_w1 = tf.matmul(x, w1)
