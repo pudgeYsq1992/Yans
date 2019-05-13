@@ -36,7 +36,7 @@ def home():
 @app.route('/', methods=['POST'])
 def start():
     return json.dumps(
-        'Welcome my friends, use URL to play with my AI.try this:http://47.101.152.193/000000.Encode your URL last six number as follow. weather(0-3)(very bad -> very good),fatigue degree(0-3)(very tired -> very relaxed),weekday(0-6),taste(0-3)(bad->good),price(0-3)(cheap->expensive),distance(0-3)(far away->close), So AI could Guess whether you like to go to that place for lunch'
+        'Welcome my friends, use URL to play with my AI.try this:http://47.101.152.193/0000210.Encode your URL last six number as follow. weather(0-3)(very bad -> very good),fatigue degree(0-3)(very tired -> very relaxed),weekday(0-6),taste(0-3)(bad->good),price(0-3)(cheap->expensive),distance(0-3)(far away->close), So AI could Guess whether you like to go to that place for lunch'
     )
 
 
@@ -67,7 +67,7 @@ def create_app(strD):
     InputX = rdm.rand(1,INPUT_NODE_NUM)
     if len(strD) != 7:
         return json.dumps(
-            'em...try to keep it in 6 numbers'
+            'em...try to keep it in 7 numbers'
         )
     if strD.isdigit():
         pass
@@ -118,9 +118,9 @@ def create_app(strD):
             'I am very interested in it,please contact me with 15365180821'
         )
 
-    return json.dumps(
-         'ok,something wrong with URL'
-    )
+    return json.dumps({
+         'ok,something wrong with URL':output_num
+    })
    
 
 @app.route('/signin' , methods=['GET'])
