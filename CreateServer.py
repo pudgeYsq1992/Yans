@@ -90,20 +90,9 @@ def create_app(strD):
         InputX[0][4] = strD[4]
         InputX[0][5] = strD[5]   
         InputX[0][6] = strD[6] 
-        print("InputX[0][0]: "
-        print(InputX[0][0])
-        print("InputX[0][1]：")
-        print(InputX[0][1])
-        print("InputX[0][2]：")
-        print(InputX[0][2])
-        print("InputX[0][3]：")
-        print(InputX[0][3])
-        print("InputX[0][4]：")
-        print(InputX[0][4])
-        print("InputX[0][5]：")
-        print(InputX[0][5])
-        print("InputX[0][6]：")
-        print(InputX[0][6])
+        print("x :"
+        print(InputX)
+        
         predict_output = sess.run(y,{x:InputX})
         predict_outputInt = tf.round(predict_output)
         printf("output_num"+output_num)
