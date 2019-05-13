@@ -95,7 +95,7 @@ def create_app(strD):
         
         predict_output = sess.run(y,{x:InputX})
         predict_outputInt = tf.round(predict_output)
-        printf("output_num"+output_num)
+        print("output_num"+output_num)
         output_num = outputByChinese(predict_outputInt,sess)
    
     if output_num == 0:
