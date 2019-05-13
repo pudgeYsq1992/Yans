@@ -95,9 +95,9 @@ def create_app(strD):
         
         predict_output = sess.run(y,{x:InputX})
         predict_outputInt = tf.round(predict_output)
-        print("output_num"+output_num)
+        
         output_num = outputByChinese(predict_outputInt,sess)
-   
+        print("output_num:"+output_num)
     if output_num == 0:
         return json.dumps(
             'I don\'t want to go to this place at all'
