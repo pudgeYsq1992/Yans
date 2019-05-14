@@ -104,10 +104,10 @@ def create_app(strD):
         #print(output_num)
         
     if output_num == 0:
-        return render_template('homepage.html',file=file)
-        #return json.dumps(
-            #'I don\'t want to go to this place at all'
-        #)
+        #return render_template('homepage.html',file=file)
+        return json.dumps(
+            'I don\'t want to go to this place at all'
+        )
     if output_num == 1:
         return json.dumps(
             'well,I just don\'t like there'
@@ -124,6 +124,7 @@ def create_app(strD):
         )
 
     if output_num == 4:
+        return render_template("qidai.html")
         return json.dumps(
             'I am very interested in it,please contact me with 15365180821'
         )
