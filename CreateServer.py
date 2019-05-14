@@ -133,9 +133,10 @@ def create_app(strD):
             #'I am very interested in it,please contact me with 15365180821'
         #)
 
-    return json.dumps(
-         'I am not sure, please change condition and try again'
-    )
+    return render_template("confused.html")
+    #return json.dumps(
+         #'I am not sure, please change condition and try again'
+    #)
    
 
 @app.route('/signin' , methods=['GET'])
