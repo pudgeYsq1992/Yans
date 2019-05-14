@@ -105,29 +105,33 @@ def create_app(strD):
         
     if output_num == 0:
         #return render_template('homepage.html',file=file)
+        return render_template("veryBad.html")
         return json.dumps(
             'I don\'t want to go to this place at all'
         )
     if output_num == 1:
+        return render_template("Bad.html")
         return json.dumps(
             'well,I just don\'t like there'
         )
 
     if output_num == 2:
-        return json.dumps(
-            'Just so so, Would you like to send an e-mail to explain the detail? 310244098@qq.com'
-        )
+        return render_template("justSoSo.html")
+        #return json.dumps(
+            #'Just so so, Would you like to send an e-mail to explain the detail? 310244098@qq.com'
+        #)
 
     if output_num == 3:
-        return json.dumps(
-            'It\'s a good oppotunity,contact me with 15365180821'
-        )
+        return render_template("goodOption.html")
+        #return json.dumps(
+            #'It\'s a good oppotunity,contact me with 15365180821'
+        #)
 
     if output_num == 4:
         return render_template("veryInterested.html")
-        return json.dumps(
-            'I am very interested in it,please contact me with 15365180821'
-        )
+        #return json.dumps(
+            #'I am very interested in it,please contact me with 15365180821'
+        #)
 
     return json.dumps(
          'I am not sure, please change condition and try again'
