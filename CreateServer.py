@@ -139,15 +139,15 @@ def signin():
         return '<h3>Hello, admin!</h3>'
     return '<h3>Bad username or password.</h3>'
 
-@lb.route('/robot.gif', methods=['GET'])
-def mainpage(id)
+@app.route('/robot.gif', methods=['GET'])
+def mainpage():
 	root_dir = os.path.abspath(os.path.dirname(__file__))
-	img_path=root_dir+'\static'+'\images'#图片文件存储在static文件夹下的images文件夹内
+	img_path=root_dir+'/templates'+'/static'+'/images'#图片文件存储在static文件夹下的images文件夹内
 	files = os.listdir(img_path)#获取图片文件名字
 	
-	if id==len(files):
-        id=0
-    file= "/static/images/"+files[id]
+	#if id==len(files):
+        #    id=0
+        file= "/static/images/robot.gif"
 	return render_template('homepage.html',file=file)    
     
 if __name__ == '__main__':
