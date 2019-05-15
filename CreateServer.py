@@ -35,7 +35,7 @@ def home():
 
 #@app.route('/api/hello', methods=['GET'])
 @app.route('/JobPreference/', methods=['GET'])
-def WebsiteDesigner():
+def MyJobPreference():
     return render_template("MyJobPreference.html")
 
 @app.route('/', methods=['POST'])
