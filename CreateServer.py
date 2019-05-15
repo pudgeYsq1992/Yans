@@ -38,6 +38,11 @@ def home():
 def MyJobPreference():
     return render_template("MyJobPreference.html")
 
+@app.route('/GuessYourPreference/', methods=['GET'])
+def GuessYourPreference():
+    return render_template("GuessYourPreference.html")
+
+
 @app.route('/', methods=['POST'])
 def start():
     return json.dumps(
@@ -137,7 +142,7 @@ def MealPreference(strD):
     y = tf.sigmoid(y)
 
     InputX = rdm.rand(1,INPUT_NODE_NUM)
-    if len(strD) != 5:
+    if len(strD) != 6:
         return json.dumps(
             'em...try to keep it in 6 numbers'
         )
