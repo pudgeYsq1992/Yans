@@ -5,7 +5,7 @@
 <SCRIPT LANGUAGE="JavaScript">
 <!--
 function chkacc(){
-        strChr = 'http://47.101.152.193/';
+        strChr = 'http://47.101.152.193/WebsiteDesigner';
 	if(document.getElementById("city").value=='上海'){
 		strChr = strChr + '0';
 	}else if(document.getElementById("city").value=='南京'){
@@ -74,12 +74,12 @@ function chkacc(){
 //-->
 </SCRIPT>
 <BODY>
-<div id="1"><center>您好，我是颜仕清</center></div>
+<div id="1">您好，我是颜仕清</div>
 <p>
 </p>
-<div id="2"><center>您对我的简历感兴趣，我很荣幸</center></div>
-<div id="3"><center>请您提交您的职位条件</center></div>
-<div id="4"><center>AI会将我对该条件的想法反馈给您</center></div>
+<div id="2">您对我的简历感兴趣，我很荣幸</div>
+<div id="3">请您提交您的职位条件</div>
+<div id="4">AI会将我对该条件的想法反馈给您</div>
 
 <p></p>
 <center>
@@ -87,7 +87,6 @@ function chkacc(){
 </center>
 <FORM METHOD=POST ACTION="" name="frm1">
 <div class="select_style">
-<center>
   工作地点:  
   <select id="city" name="工作地点">
     <optgroup label="工作地点">   
@@ -96,10 +95,8 @@ function chkacc(){
     <option>日本</option> 
     <option>其他地点</option> 
   </select> 
-</center>
 </div>
 <div class="select_style">
-<center>
   工作内容: 
   <select id="job content" name="工作内容">
     <optgroup label="工作内容">
@@ -108,11 +105,9 @@ function chkacc(){
     <option>产品经理</option>
     <option>其他职位</option>
   </select>
-</center>
 </div>
 
 <div class="select_style">
-<center>
   工作时长: 
   <select id="working hours" name="工作时长">
     <optgroup label="工作时长">
@@ -120,11 +115,9 @@ function chkacc(){
     <option>995</option>
     <option>996</option>
   </select>
-</center>
 </div>
 
 <div class="select_style">
-<center>
   薪资待遇: 
   <select id="salary" name="薪资待遇">
     <optgroup label="薪资待遇">
@@ -133,22 +126,18 @@ function chkacc(){
     <option selected>15000-25000</option>
     <option>25000-30000</option>
   </select>
-</center>
 </div>
  
 <div class="select_style">
-<center>
   是否为外包: 
   <select id="job category" name="工作性质">
     <optgroup label="工作性质">
     <option>是</option>
     <option selected>否</option>
   </select>
-</center>
 </div>
 
-<div class="select_style">
-<center>  
+<div class="select_style"> 
   公司位置: 
   <select id="location" name="公司位置">
     <optgroup label="公司位置">
@@ -157,11 +146,9 @@ function chkacc(){
     <option>繁华街区</option>
     <option>偏远</option>
   </select>
-</center>
 </div>
 
 <div class="select_style">
-<center>
   公司规模: 
   <select id="size" name="公司规模">
     <optgroup label="公司规模">
@@ -170,7 +157,6 @@ function chkacc(){
     <option>小公司50-500人</option>
     <option>创业公司</option>
   </select>
-</center>
 </div>
 
 <INPUT TYPE="button" value="提交" onclick="chkacc();">

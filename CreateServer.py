@@ -29,7 +29,7 @@ def outputByChinese(outputArray,sess):
 
 app = Flask(__name__)
 #@app.route('/api/hello', methods=['GET'])
-@app.route('/', methods=['GET'])
+@app.route('/WebsiteDesigner/', methods=['GET'])
 def home():
     return render_template("homepage.html")
 
@@ -90,62 +90,31 @@ def create_app(strD):
         InputX[0][4] = strD[4]
         InputX[0][5] = strD[5]   
         InputX[0][6] = strD[6] 
-        #print("x :")
-        #print(InputX)
         
         predict_output = sess.run(y,{x:InputX})
-        #print("predict_output :")
-        #print(predict_output)
         predict_outputInt = tf.round(predict_output)
-        #print("predict_outputInt :")
-        #print(predict_outputInt)
-        output_num = outputByChinese(predict_outputInt,sess)
-        #print("output_num:")
-        #print(output_num)
-        
+        output_num = outputByChinese(predict_outputInt,sess)               
     if output_num == 0:
-        #return render_template('homepage.html',file=file)
-        return render_template("veryBad.html")
-        return json.dumps(
-            'I don\'t want to go to this place at all'
-        )
+        return render_template("veryBad.html")        
     if output_num == 1:
-        return render_template("Bad.html")
-        return json.dumps(
-            'well,I just don\'t like there'
-        )
-
+        return render_template("Bad.html")        
     if output_num == 2:
-        return render_template("justSoSo.html")
-        #return json.dumps(
-            #'Just so so, Would you like to send an e-mail to explain the detail? 310244098@qq.com'
-        #)
-
+        return render_template("justSoSo.html")        
     if output_num == 3:
-        return render_template("goodOption.html")
-        #return json.dumps(
-            #'It\'s a good oppotunity,contact me with 15365180821'
-        #)
-
+        return render_template("goodOption.html")        
     if output_num == 4:
-        return render_template("veryInterested.html")
-        #return json.dumps(
-            #'I am very interested in it,please contact me with 15365180821'
-        #)
-
+        return render_template("veryInterested.html")        
     return render_template("confused.html")
-    #return json.dumps(
-         #'I am not sure, please change condition and try again'
-    #)
+    
    
-
+'''
 @app.route('/signin' , methods=['GET'])
 def signin():
     # 需要从request对象读取表单内容：
     if request.form['username'] == 'admin' and request.form['password'] == 'password':
         return '<h3>Hello, admin!</h3>'
     return '<h3>Bad username or password.</h3>'
-
+'''
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=80)
 
