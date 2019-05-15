@@ -1,0 +1,162 @@
+<HTML>
+<HEAD>
+<TITLE>Yan's AI playground</TITLE>
+</HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function chkacc(){
+        strChr = 'http://47.101.152.193/GuessYourPreference/';
+	if(document.getElementById("weather").value=='恶劣'){
+		strChr = strChr + '0';
+	}else if(document.getElementById("weather").value=='较差'){
+                strChr = strChr + '1';
+        }else if(document.getElementById("weather").value=='较好'){
+                strChr = strChr + '2';
+        }else if(document.getElementById("weather").value=='很好'){
+                strChr = strChr + '3';
+        }
+
+        if(document.getElementById("tired").value=='很累'){
+                strChr = strChr + '0';
+        }else if(document.getElementById("tired").value=='有点累'){
+                strChr = strChr + '1';
+        }else if(document.getElementById("tired").value=='不大累'){
+                strChr = strChr + '2';
+        }else if(document.getElementById("tired").value=='很轻松'){
+                strChr = strChr + '3';
+        }
+
+        if(document.getElementById("taste").value=='不好吃'){
+                strChr = strChr + '0';
+        }else if(document.getElementById("taste").value=='一般般'){
+                strChr = strChr + '1';
+        }else if(document.getElementById("taste").value=='还不错'){
+                strChr = strChr + '2';
+        }else if(document.getElementById("taste").value=='很好吃'){
+                strChr = strChr + '3';
+        }
+
+        if(document.getElementById("weekday").value=='星期一'){
+                strChr = strChr + '0';
+        }else if(document.getElementById("weekday").value=='星期二'){
+                strChr = strChr + '1';
+        }else if(document.getElementById("weekday").value=='星期三'){
+                strChr = strChr + '2';
+        }else if(document.getElementById("weekday").value=='星期四'){
+                strChr = strChr + '3';
+        }else if(document.getElementById("weekday").value=='星期五'){
+                strChr = strChr + '4';
+        }else if(document.getElementById("weekday").value=='星期六'){
+                strChr = strChr + '5';
+        }else if(document.getElementById("weekday").value=='星期天'){
+                strChr = strChr + '6';
+        }
+
+        if(document.getElementById("price").value=='便宜'){
+                strChr = strChr + '0';
+        }else if(document.getElementById("price").value=='还行'){
+                strChr = strChr + '1';
+        }else if(document.getElementById("price").value=='有点贵'){
+                strChr = strChr + '1';
+        }else if(document.getElementById("price").value=='很贵'){
+                strChr = strChr + '1';
+        }
+ 
+        if(document.getElementById("distance").value=='很远'){
+                strChr = strChr + '0';
+        }else if(document.getElementById("distance").value=='有些远'){
+                strChr = strChr + '1';
+        }else if(document.getElementById("distance").value=='不算远'){
+                strChr = strChr + '2';
+        }else if(document.getElementById("distance").value=='很近'){
+                strChr = strChr + '3';
+        }
+
+        
+        window.location.href=strChr; 
+}
+//-->
+</SCRIPT>
+<BODY>
+<div id="1">这是一个简单的AI demo</div>
+<p>
+</p>
+<div id="2">请您输入某家店的情况</div>
+<div id="3">AI将会猜测您想不想去这家店</div>
+
+<p></p>
+    <img src="{{ url_for('static', filename= './images/robot.gif',_t=val1) }}" width="200" height="200" alt="你的图片被外星人劫持了～～"/>
+<FORM METHOD=POST ACTION="" name="frm1">
+<div class="select_style">
+  今天天气怎么样？
+  <select id="weather" name="天气">
+    <optgroup label="天气">   
+    <option>恶劣</option> 
+    <option selected>较差</option> 
+    <option>较好</option> 
+    <option>很好</option> 
+  </select> 
+</div>
+<div class="select_style">
+  早上累不累？:
+  <select id="tired" name="疲劳程度">
+    <optgroup label="疲劳程度">
+    <option>很累</option>
+    <option selected>有点累</option>
+    <option>不大累</option>
+    <option>很轻松</option>
+  </select>
+</div>
+
+<div class="select_style">
+  今天周几？ 
+  <select id="weekday" name="工作时长">
+    <optgroup label="工作时长">
+    <option selected>星期一</option>
+    <option>星期二</option>
+    <option>星期三</option>
+    <option>星期四</option>
+    <option>星期五</option>
+    <option>星期六</option>
+    <option>星期天</option>
+  </select>
+</div>
+
+ 
+<div class="select_style">
+  这家店口味怎么样？ 
+  <select id="taste" name="工作性质">
+    <optgroup label="工作性质">
+    <option>不好吃</option>
+    <option selected>一般般</option>
+    <option>还不错</option>
+    <option>很好吃</option>
+  </select>
+</div>
+
+<div class="select_style"> 
+  这家店菜价怎么样？
+  <select id="price" name="公司位置">
+    <optgroup label="公司位置">
+    <option>便宜</option>
+    <option selected>还行</option>
+    <option>有点贵</option>
+    <option>很贵</option>
+  </select>
+</div>
+
+<div class="select_style">
+  这家店离公司远吗？
+  <select id="distance" name="公司规模">
+    <optgroup label="公司规模">
+    <option>很远</option>
+    <option selected>有些远</option>
+    <option>不算远</option>
+    <option>很近</option>
+  </select>
+</div>
+
+<INPUT TYPE="button" value="提交" onclick="chkacc();">
+</FORM>
+</BODY>
+</HTML>

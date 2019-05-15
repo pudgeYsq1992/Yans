@@ -112,14 +112,81 @@ def JobPreference(strD):
     return render_template("confused.html")
     
    
-'''
-@app.route('/signin' , methods=['GET'])
-def signin():
-    # 需要从request对象读取表单内容：
-    if request.form['username'] == 'admin' and request.form['password'] == 'password':
-        return '<h3>Hello, admin!</h3>'
-    return '<h3>Bad username or password.</h3>'
-'''
+@app.route('/GuessYourPreference/<strD>',methods=['GET','POST'])
+def MealPreference(strD):
+    MODEL_SAVE_PATH = "MealPreferenceModel/"
+    MODEL_NAME = "model.ckpt"
+    INPUT_NODE_NUM = 6
+    
+    x = tf.placeholder(tf.float32, shape = (None,INPUT_NODE_NUM), name = 'x-input')
+    y_ = tf.placeholder(tf.float32, shape = (None, 5), name = 'y-input')
+
+    rdm = RandomState(1)
+    dataset_size = 101
+
+    w1 = tf.Variable(tf.random_normal([INPUT_NODE_NUM,16],stddev = 1))                       
+    w2 = tf.Variable(tf.random_normal([16,16],stddev = 1))                           
+    w3 = tf.Variable(tf.random_normal([16,5],stddev = 1))                            
+    #w4 = tf.Variable(tf.random_normal([3,1],stddev = 1))
+    saver = tf.train.Saver() 
+    x_w1 = tf.matmul(x, w1)
+    x_w1 = tf.sigmoid(x_w1)
+    w1_w2 = tf.matmul(x_w1, w2)
+    w1_w2 = tf.sigmoid(w1_w2)
+    y = tf.matmul(w1_w2, w3)
+    y = tf.sigmoid(y)
+
+    InputX = rdm.rand(1,INPUT_NODE_NUM)
+    if len(strD) != 5:
+        return json.dumps(
+            'em...try to keep it in 6 numbers'
+        )
+    if strD.isdigit():
+        pass
+    else:
+        return json.dumps(
+            'please use int number'
+        )
+
+    with tf.Session() as sess:
+    #读取模型
+        ckpt = tf.train.get_checkpoint_state(MODEL_SAVE_PATH)
+        if ckpt and ckpt.model_checkpoint_path:
+            saver.restore(sess, ckpt.model_checkpoint_path)
+        else:
+            pass    
+        InputX[0][0] = strD[0]
+        InputX[0][1] = strD[1]
+        InputX[0][2] = strD[2]
+        InputX[0][3] = strD[3]
+        InputX[0][4] = strD[4]
+        InputX[0][5] = strD[5]    
+        
+        predict_output = sess.run(y,{x:InputX})
+        predict_outputInt = tf.round(predict_output)
+        output_num = outputByChinese(predict_outputInt,sess)               
+    if output_num == 0:
+        return json.dumps(
+            'you dont want to go there at all'
+        )       
+    if output_num == 1:
+        return json.dumps(
+            'you dont like that place'
+        )   
+    if output_num == 2:
+        return json.dumps(
+            'the place is just so so.'
+        )     
+    if output_num == 3:
+        return json.dumps(
+            'the place is a good place to go.'
+        )          
+    if output_num == 4:
+        return json.dumps(
+            'you will be there at any cost'
+        )          
+    return render_template("confused.html")
+
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=80)
 
