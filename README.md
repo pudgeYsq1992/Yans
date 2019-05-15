@@ -1,2 +1,1 @@
-# MyJobPreference
-train an AI to reply HR automaticlly
+This is an website or introducing myself
