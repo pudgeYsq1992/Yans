@@ -28,9 +28,14 @@ def outputByChinese(outputArray,sess):
         return 4        
 
 app = Flask(__name__)
-#@app.route('/api/hello', methods=['GET'])
-@app.route('/WebsiteDesigner/', methods=['GET'])
+
+@app.route('/', methods=['GET'])
 def home():
+    return render_template("HomePage.html")
+
+#@app.route('/api/hello', methods=['GET'])
+@app.route('/JobPreference/', methods=['GET'])
+def WebsiteDesigner():
     return render_template("MyJobPreference.html")
 
 @app.route('/', methods=['POST'])
@@ -40,8 +45,8 @@ def start():
     )
 
 
-@app.route('/WebsiteDesigner/<strD>',methods=['GET','POST'])
-def create_app(strD):
+@app.route('/JobPreference/<strD>',methods=['GET','POST'])
+def JobPreference(strD):
     MODEL_SAVE_PATH = "model/"
     MODEL_NAME = "model.ckpt"
     INPUT_NODE_NUM = 7
