@@ -5,7 +5,7 @@
 <SCRIPT LANGUAGE="JavaScript">
 <!--
 function chkacc(){
-        strChr = 'http://47.101.152.193/WebsiteDesigner';
+        strChr = 'http://47.101.152.193/WebsiteDesigner/';
 	if(document.getElementById("city").value=='上海'){
 		strChr = strChr + '0';
 	}else if(document.getElementById("city").value=='南京'){
@@ -82,9 +82,7 @@ function chkacc(){
 <div id="4">AI会将我对该条件的想法反馈给您</div>
 
 <p></p>
-<center>
     <img src="{{ url_for('static', filename= './images/robot.gif',_t=val1) }}" width="200" height="200" alt="你的图片被外星人劫持了～～"/>
-</center>
 <FORM METHOD=POST ACTION="" name="frm1">
 <div class="select_style">
   工作地点:  

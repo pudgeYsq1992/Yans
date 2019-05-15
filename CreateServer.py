@@ -31,7 +31,7 @@ app = Flask(__name__)
 #@app.route('/api/hello', methods=['GET'])
 @app.route('/WebsiteDesigner/', methods=['GET'])
 def home():
-    return render_template("homepage.html")
+    return render_template("MyJobPreference.html")
 
 @app.route('/', methods=['POST'])
 def start():
@@ -40,7 +40,7 @@ def start():
     )
 
 
-@app.route('/<strD>',methods=['GET','POST'])
+@app.route('/WebsiteDesigner/<strD>',methods=['GET','POST'])
 def create_app(strD):
     MODEL_SAVE_PATH = "model/"
     MODEL_NAME = "model.ckpt"
