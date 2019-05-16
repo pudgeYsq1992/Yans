@@ -9,7 +9,7 @@ body{
 	header{
 		width:100%;
 		background:#33FFCC;
-		height:20%
+		height:10%
 	}
 	aside{
 		width:15%;
@@ -28,7 +28,7 @@ body{
 	footer{
 		width:100%;
 		background:#CC99FF;
-		height:20%;
+		height:10%;
 		float:left
         }
 
@@ -76,7 +76,7 @@ function AI_demo(){
 </SCRIPT>
 <BODY>
 <header>
-<img src="{{ url_for('static', filename= './images/西电.png',_t=val1) }}" width=100% height=100% alt="你的图片被外星人劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/西电logo.png',_t=val1) }}" width=100% height=100% alt="你的图片被外星人劫持了～～"/>
 </header>
 
 <aside>
@@ -123,11 +123,15 @@ function AI_demo(){
     <INPUT TYPE="button" value="南京鸭名吃" onclick="yazi();">
     </FORM>
   </div>
-<img src="{{ url_for('static', filename= './images/大隈重信.jpg',_t=val1) }}"; width="500px" ;height="500px"; style="position:relative; left:20%; top:20%; "; alt="你的图片被外星人劫持了～～"/>
-<!-- 视频demo
-<video src="{{url_for('static',filename = './vedio/取针器.mp4')}}" width="250" height="400" controls="controls">
-</video>
--->
+    <center>
+      <img src="{{ url_for('static', filename= './images/大隈重信.jpg',_t=val1) }}"; width=400 ;height=500 ; alt="你的图片被外星人劫持了～～"/>
+      </img>
+    </center>
+  <div id="vedioBox"; width="200px" ;height="200px"; style="position:absolute; left:"400px"; top:"500px"; ">
+    <video src="{{url_for('static',filename = './vedio/取针器.mp4')}}"; width="200px" ;height="200px" ; controls="controls">
+    </video>
+  </div>
+
 </article>
 
 <footer>
