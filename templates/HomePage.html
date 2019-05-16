@@ -4,7 +4,7 @@
 <STYLE>
 .div-inline{display:inline}
 body{
-		height:900px;
+		height:1000px;
 	}
 	header{
 		width:100%;
@@ -12,15 +12,15 @@ body{
 		height:20%
 	}
 	aside{
-		width:20%;
+		width:15%;
 		background:#00CCFF;
 		height:80%;
 		float:left
 	}
 
 	article{
-		width:80%;
-		background:#66FF66;
+		width:85%;
+		background:#FFFFF0;
 		height:80%;
 		float:left
 	}
@@ -80,57 +80,60 @@ function AI_demo(){
 </header>
 
 <aside>
+  <p></p>
+  <center>
+    <img src="{{ url_for('static', filename= './images/头像.jpg',_t=val1) }}" width="150" height="200" alt="你的图片被外星人劫持了～～"/>
+  </center>
 
-<p></p>
+  <center>
+    <FORM METHOD=POST ACTION="" name="frm1">
+    职业偏好
+    <INPUT TYPE="button" value="查看" onclick="chkacc();">
+    </FORM>
+  </center>  
 
-<img src="{{ url_for('static', filename= './images/头像.jpg',_t=val1) }}" width="150" height="200" alt="你的图片被外星人劫持了～～"/>
-
-<FORM METHOD=POST ACTION="" name="frm1">
-职业偏好
-<INPUT TYPE="button" value="查看" onclick="chkacc();">
-</FORM>
-
-<FORM METHOD=POST ACTION="" name="frm1">
-AI demo
-<INPUT TYPE="button" value="查看" onclick="AI_demo();">
-</FORM>
+  <center>
+    <FORM METHOD=POST ACTION="" name="frm1">
+    AI demo
+    <INPUT TYPE="button" value="查看" onclick="AI_demo();">
+    </FORM>
+  </center>
 </aside>
 
 <article>
-<div id="1" height=50%>我的文章</div>
-<div id="article" width=50% height=50% background:#CC99FF>
-<center>
-<FORM METHOD=POST ACTION="" name="frm1">
-<INPUT TYPE="button" value="简书主页" onclick="toJianShu();">
-</FORM>
+  <div id="article"; height="100px" style="position:relative; background:yellow; top:90%">
+  我的文章
+    <FORM METHOD=POST ACTION="" name="frm1">
+    <INPUT TYPE="button" value="简书主页" onclick="toJianShu();">
+    </FORM>
 
-<FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
-<INPUT TYPE="button" value="伊豆的舞女" onclick="odoriko();">
-</FORM>
+    <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
+    <INPUT TYPE="button" value="伊豆的舞女" onclick="odoriko();">
+    </FORM>
 
-<FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
-<INPUT TYPE="button" value="到此莫愁" onclick="mochouhu();">
-</FORM>
+    <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
+    <INPUT TYPE="button" value="到此莫愁" onclick="mochouhu();">
+    </FORM>
 
-<FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
-<INPUT TYPE="button" value="乌衣巷" onclick="wuyixiang();">
-</FORM>
+    <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
+    <INPUT TYPE="button" value="乌衣巷" onclick="wuyixiang();">
+    </FORM>
 
-<FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
-<INPUT TYPE="button" value="南京鸭名吃" onclick="yazi();">
-</FORM>
-</center>
-<img src="{{ url_for('static', filename= './images/大隈重信.jpg',_t=val1) }}" width=50% height=50% alt="你的图片被外星人劫持了～～"/>
-</div>
+    <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
+    <INPUT TYPE="button" value="南京鸭名吃" onclick="yazi();">
+    </FORM>
+  </div>
+<img src="{{ url_for('static', filename= './images/大隈重信.jpg',_t=val1) }}"; width="500px" ;height="500px"; style="position:relative; left:20%; top:20%; "; alt="你的图片被外星人劫持了～～"/>
 <!-- 视频demo
 <video src="{{url_for('static',filename = './vedio/取针器.mp4')}}" width="250" height="400" controls="controls">
 </video>
 -->
 </article>
+
 <footer>
-<audio controls="controls" autoplay="autoplay">
+  <audio controls="controls" autoplay="autoplay">
   <source src="{{url_for('static',filename = './audio/SleepAway.mp3')}}"  />
-Your browser does not support the audio element.
+  Your browser does not support the audio element.
 </audio>
 
 </footer>
