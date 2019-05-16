@@ -31,6 +31,19 @@ def outputByChinese(outputArray,sess):
 
 app = Flask(__name__)
 
+@app.route('/vedio/<vedio>')
+def stream_mp4(vedio):
+    def generate():
+        path = './audio/SleepAway.mp3'
+        with open(path, 'rb') as fmp3:
+            data = fmp3.read(1024)
+            while data:
+                yield data
+                data = fmp3.read(1024)
+
+    return Response(generate(), mimetype="vedio/mp4")
+
+
 @app.route('/audio/<music>')
 def stream_mp3(music):
     def generate():
