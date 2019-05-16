@@ -4,6 +4,7 @@ from flask import request
 from flask import redirect
 from flask import jsonify
 from flask import render_template
+from flask import Response
 import json
 
 #模型部分
@@ -13,6 +14,7 @@ from numpy.random import RandomState
 import numpy as np
 import operator
 import string
+
 
 
 def outputByChinese(outputArray,sess):
@@ -28,6 +30,18 @@ def outputByChinese(outputArray,sess):
         return 4        
 
 app = Flask(__name__)
+
+@app.route('/audio/<music>')
+def stream_mp3(music):
+    def generate():
+        path = './audio/SleepAway.mp3'
+        with open(path, 'rb') as fmp3:
+            data = fmp3.read(1024)
+            while data:
+                yield data
+                data = fmp3.read(1024)
+ 
+    return Response(generate(), mimetype="audio/mp3")
 
 @app.route('/', methods=['GET'])
 def home():
