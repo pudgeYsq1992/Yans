@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>Yan's AI playground</TITLE>
+<TITLE>Yan's personal Website</TITLE>
 <STYLE>
 .div-inline{display:inline}
 body{
@@ -76,7 +76,7 @@ function AI_demo(){
 </SCRIPT>
 <BODY>
 <header>
-<img src="{{ url_for('static', filename= './images/西电logo.png',_t=val1) }}" width=100% height=100% alt="你的图片被外星人劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/西电-早稻田logo.png',_t=val1) }}" width=100% height=100% alt="你的图片被外星人劫持了～～"/>
 </header>
 
 <aside>
@@ -85,23 +85,55 @@ function AI_demo(){
     <img src="{{ url_for('static', filename= './images/头像.jpg',_t=val1) }}" width="150" height="200" alt="你的图片被外星人劫持了～～"/>
   </center>
 
-  <center>
-    <FORM METHOD=POST ACTION="" name="frm1">
-    职业偏好
-    <INPUT TYPE="button" value="查看" onclick="chkacc();">
-    </FORM>
-  </center>  
+  <hr>
+  </hr>
 
   <center>
-    <FORM METHOD=POST ACTION="" name="frm1">
-    AI demo
-    <INPUT TYPE="button" value="查看" onclick="AI_demo();">
-    </FORM>
+    开发语言: C++,python
   </center>
+
+  <hr>
+  </hr>
+
+  <center>
+    供职单位:<br/> 商泰汽车信息系统有限公司
+  </center>
+
+  <hr>
+  </hr>
+
+  <center>
+  联系方式: <br />15365180821
+  </center>
+
+  <hr>
+  </hr>
+
+  <center>
+  微信: <br />a310244098
+  </center>
+
 </aside>
 
 <article>
-  <div id="article"; height="100px" style="position:relative; background:yellow; top:90%">
+  <div id="article"; height="300px" style="position:relative;">
+        AI游乐场
+        <FORM METHOD=POST ACTION="" name="frm1" >
+          我的职业偏好
+          <INPUT TYPE="button" value="转到" onclick="chkacc();">
+        </FORM>
+
+        <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
+          猜某家饭馆你喜不喜欢
+        <INPUT TYPE="button" value="转到" onclick="AI_demo();">
+        </FORM>
+  </div>
+  <!--画条横线 -->
+
+  <hr>
+  </hr>  
+
+  <div id="article"; height="100px" style="position:relative;">
   我的文章
     <FORM METHOD=POST ACTION="" name="frm1">
     <INPUT TYPE="button" value="简书主页" onclick="toJianShu();">
@@ -123,15 +155,75 @@ function AI_demo(){
     <INPUT TYPE="button" value="南京鸭名吃" onclick="yazi();">
     </FORM>
   </div>
-    <center>
-      <img src="{{ url_for('static', filename= './images/大隈重信.jpg',_t=val1) }}"; width=400 ;height=500 ; alt="你的图片被外星人劫持了～～"/>
-      </img>
-    </center>
-  <div id="vedioBox"; width="200px" ;height="200px"; style="position:absolute; left:"400px"; top:"500px"; ">
-    <video src="{{url_for('static',filename = './vedio/取针器.mp4')}}"; width="200px" ;height="200px" ; controls="controls">
-    </video>
+
+  <hr>
+  </hr>
+  摄影作品
+  <div id="article">
+    <img src="{{ url_for('static', filename= './images/大隈重信.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人劫持了～～"/>
+    </img>
+    <img src="{{ url_for('static', filename= './images/资.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+    <img src="{{ url_for('static', filename= './images/群马的山.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+<img src="{{ url_for('static', filename= './images/秋明湖.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+<!--
+<img src="{{ url_for('static', filename= './images/花.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+-->
+<img src="{{ url_for('static', filename= './images/海边.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+<!--
+<img src="{{ url_for('static', filename= './images/光影3.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+-->
+<img src="{{ url_for('static', filename= './images/光影.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+
+<img src="{{ url_for('static', filename= './images/光影2.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+<!--
+<img src="{{ url_for('static', filename= './images/车站.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+-->
+<img src="{{ url_for('static', filename= './images/车站影.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+<img src="{{ url_for('static', filename= './images/我的照片.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+
+<img src="{{ url_for('static', filename= './images/雪板.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+<!--
+<img src="{{ url_for('static', filename= './images/雪道.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+-->
+<img src="{{ url_for('static', filename= './images/IPS2楼.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+劫持了～～"/>
+    </img>
+
+
   </div>
 
+<!--
+      <div id="article"; width="200px" ;height="200px"; style="position:relative; left:"400px"; top:"500px"; float:left; ">
+        <video src="{{url_for('static',filename = './vedio/取针器.mp4')}}"; width="200px" ;height="200px" ; controls="controls">
+        </video>
+      </div>
+-->
 </article>
 
 <footer>
