@@ -113,18 +113,27 @@ function AI_demo(){
   微信: <br />a310244098
   </center>
 
+  <hr>
+  </hr>
+
+
+  <center>
+  <a href="{{ url_for('static', filename= './doc/颜仕清-简历.docx',_t=val1) }}" download="颜仕清-简历.docx">下载我的简历</a>
+  </center>
+
 </aside>
 
 <article>
   <div id="article"; height="300px" style="position:relative;">
-        AI游乐场
+        AI游乐场</br>
+        我用深度学习训练了一些模型,你可以点击进行查看
         <FORM METHOD=POST ACTION="" name="frm1" >
-          我的职业偏好
+          HR请看过来
           <INPUT TYPE="button" value="转到" onclick="chkacc();">
         </FORM>
 
         <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
-          猜某家饭馆你喜不喜欢
+          饭店偏好预测
         <INPUT TYPE="button" value="转到" onclick="AI_demo();">
         </FORM>
   </div>
