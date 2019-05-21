@@ -6,23 +6,23 @@
 <!--
 function chkacc(){
         strChr = 'http://47.101.152.193/JobPreference/';
-	if(document.getElementById("city").value=='上海'){
+	if(document.getElementById("city").value=='ShangHai'){
 		strChr = strChr + '0';
-	}else if(document.getElementById("city").value=='南京'){
+	}else if(document.getElementById("city").value=='NanJing'){
                 strChr = strChr + '1';
-        }else if(document.getElementById("city").value=='日本'){
+        }else if(document.getElementById("city").value=='Tokyo'){
                 strChr = strChr + '2';
-        }else if(document.getElementById("city").value=='其他地点'){
+        }else if(document.getElementById("city").value=='Other places'){
                 strChr = strChr + '3';
         }
 
-        if(document.getElementById("job content").value=='技术研究员'){
+        if(document.getElementById("job content").value=='Technical Researcher'){
                 strChr = strChr + '0';
-        }else if(document.getElementById("job content").value=='C++程序员'){
+        }else if(document.getElementById("job content").value=='C++ Programmer'){
                 strChr = strChr + '1';
-        }else if(document.getElementById("job content").value=='产品经理'){
+        }else if(document.getElementById("job content").value=='Product Manager'){
                 strChr = strChr + '2';
-        }else if(document.getElementById("job content").value=='其他职位'){
+        }else if(document.getElementById("job content").value=='Other Position'){
                 strChr = strChr + '3';
         }
 
@@ -44,29 +44,29 @@ function chkacc(){
                 strChr = strChr + '3';
         }
 
-        if(document.getElementById("job category").value=='否'){
+        if(document.getElementById("job category").value=='No'){
                 strChr = strChr + '0';
-        }else if(document.getElementById("job category").value=='是'){
+        }else if(document.getElementById("job category").value=='Yes'){
                 strChr = strChr + '1';
         }
  
         if(document.getElementById("location").value=='CBD'){
                 strChr = strChr + '0';
-        }else if(document.getElementById("location").value=='软件园'){
+        }else if(document.getElementById("location").value=='Software Park'){
                 strChr = strChr + '1';
-        }else if(document.getElementById("location").value=='繁华街区'){
+        }else if(document.getElementById("location").value=='Prosperous Block'){
                 strChr = strChr + '2';
-        }else if(document.getElementById("location").value=='偏远'){
+        }else if(document.getElementById("location").value=='Remote Districts'){
                 strChr = strChr + '3';
         }
 
-        if(document.getElementById("size").value=='上市公司'){
+        if(document.getElementById("size").value=='Listed Company'){
                 strChr = strChr + '0';
-        }else if(document.getElementById("size").value=='大公司500人+'){
+        }else if(document.getElementById("size").value=='Big Company 500+'){
                 strChr = strChr + '1';
-        }else if(document.getElementById("size").value=='小公司50-500人'){
+        }else if(document.getElementById("size").value=='Small Company 50-500'){
                 strChr = strChr + '2';
-        }else if(document.getElementById("size").value=='创业公司'){
+        }else if(document.getElementById("size").value=='Venture Company'){
                 strChr = strChr + '3';
         }
         window.location.href=strChr; 
@@ -74,39 +74,39 @@ function chkacc(){
 //-->
 </SCRIPT>
 <BODY>
-<div id="1">您好，我是颜仕清</div>
+<div id="1">Nice to meet you! I am Yan Shiqing.</div>
 <p>
 </p>
-<div id="2">您对我的简历感兴趣，我很荣幸</div>
-<div id="3">请您提交您的职位条件</div>
-<div id="4">AI会将我对该条件的想法反馈给您</div>
+<div id="2">I am honored that you are interested in my resume.</div>
+<div id="3">Please choose the following boxes and submit.</div>
+<div id="4">AI will give you my thoughts on that condition.</div>
 
 <p></p>
-    <img src="{{ url_for('static', filename= './images/robot.gif',_t=val1) }}" width="200" height="200" alt="你的图片被外星人劫持了～～"/>
+    <img src="{{ url_for('static', filename= './images/robot.gif',_t=val1) }}" width="200" height="200" alt="our picture was hijacked by aliens."/>
 <FORM METHOD=POST ACTION="" name="frm1">
 <div class="select_style">
-  工作地点:  
+  Working Place:  
   <select id="city" name="工作地点">
     <optgroup label="工作地点">   
-    <option>上海</option> 
-    <option selected>南京</option> 
-    <option>日本</option> 
-    <option>其他地点</option> 
+    <option>ShangHai</option> 
+    <option selected>NanJing</option> 
+    <option>Tokyo</option> 
+    <option>Other places</option> 
   </select> 
 </div>
 <div class="select_style">
-  工作内容: 
+  Job Content: 
   <select id="job content" name="工作内容">
     <optgroup label="工作内容">
-    <option>技术研究员</option>
-    <option selected>C++程序员</option>
-    <option>产品经理</option>
-    <option>其他职位</option>
+    <option>Technical Researcher</option>
+    <option selected>C++ Programmer</option>
+    <option>Product Manager</option>
+    <option>Other Position</option>
   </select>
 </div>
 
 <div class="select_style">
-  工作时长: 
+  Working Hours: 
   <select id="working hours" name="工作时长">
     <optgroup label="工作时长">
     <option selected>965</option>
@@ -116,7 +116,7 @@ function chkacc(){
 </div>
 
 <div class="select_style">
-  薪资待遇: 
+  Salary: 
   <select id="salary" name="薪资待遇">
     <optgroup label="薪资待遇">
     <option>0-10000</option>
@@ -127,37 +127,37 @@ function chkacc(){
 </div>
  
 <div class="select_style">
-  是否为外包: 
+  Outsource?: 
   <select id="job category" name="工作性质">
     <optgroup label="工作性质">
-    <option>是</option>
-    <option selected>否</option>
+    <option>Yes</option>
+    <option selected>No</option>
   </select>
 </div>
 
 <div class="select_style"> 
-  公司位置: 
+  Company Location: 
   <select id="location" name="公司位置">
     <optgroup label="公司位置">
     <option>CBD</option>
-    <option selected>软件园</option>
-    <option>繁华街区</option>
-    <option>偏远</option>
+    <option selected>Software Park</option>
+    <option>Prosperous Block</option>
+    <option>Remote Districts</option>
   </select>
 </div>
 
 <div class="select_style">
-  公司规模: 
+  Company Size: 
   <select id="size" name="公司规模">
     <optgroup label="公司规模">
-    <option>上市公司</option>
-    <option selected>大公司500人+</option>
-    <option>小公司50-500人</option>
-    <option>创业公司</option>
+    <option>Listed Company</option>
+    <option selected>Big Company 500+</option>
+    <option>Small Company 50-500</option>
+    <option>Venture Company</option>
   </select>
 </div>
 
-<INPUT TYPE="button" value="提交" onclick="chkacc();">
+<INPUT TYPE="button" value="check" onclick="chkacc();">
 </FORM>
 </BODY>
 </HTML>

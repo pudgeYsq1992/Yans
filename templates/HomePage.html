@@ -76,13 +76,13 @@ function AI_demo(){
 </SCRIPT>
 <BODY>
 <header>
-<img src="{{ url_for('static', filename= './images/西电-早稻田logo.png',_t=val1) }}" width=100% height=100% alt="你的图片被外星人劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/西电-早稻田logo.png',_t=val1) }}" width=100% height=100% alt="Your picture was hijacked by aliens."/>
 </header>
 
 <aside>
   <p></p>
   <center>
-    <img src="{{ url_for('static', filename= './images/头像.jpg',_t=val1) }}" width="150" height="200" alt="你的图片被外星人劫持了～～"/>
+    <img src="{{ url_for('static', filename= './images/头像.jpg',_t=val1) }}" width="150" height="200" alt="Your picture was hijacked by aliens."/>
   </center>
 
   <hr>
@@ -118,7 +118,7 @@ function AI_demo(){
 
 
   <center>
-  <a href="{{ url_for('static', filename= './doc/颜仕清-简历.docx',_t=val1) }}" download="颜仕清-简历.docx">Download resume</a>
+  <a href="{{ url_for('static', filename= './doc/颜仕清-简历.docx',_t=val1) }}" download="颜仕清-简历.docx">Download Yan's Resume</a>
   </center>
 
 </aside>
@@ -126,15 +126,15 @@ function AI_demo(){
 <article>
   <div id="article"; height="300px" style="position:relative;">
         AI playground</br>
-        我用深度学习训练了一些模型,你可以点击进行查看
+        I trained some models with Deep learning, you can check them by click.
         <FORM METHOD=POST ACTION="" name="frm1" >
-          HR请看过来
-          <INPUT TYPE="button" value="转到" onclick="chkacc();">
+          HRs: Here, right here!
+          <INPUT TYPE="button" value="Go to" onclick="chkacc();">
         </FORM>
 
         <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
-          饭店偏好预测
-        <INPUT TYPE="button" value="转到" onclick="AI_demo();">
+          Preference prediction on restaurant
+        <INPUT TYPE="button" value="Go to" onclick="AI_demo();">
         </FORM>
   </div>
   <!--画条横线 -->
@@ -143,85 +143,71 @@ function AI_demo(){
   </hr>  
 
   <div id="article"; height="100px" style="position:relative;">
-  我的文章
+  My Articles
     <FORM METHOD=POST ACTION="" name="frm1">
-    <INPUT TYPE="button" value="简书主页" onclick="toJianShu();">
+    <INPUT TYPE="button" value="My homepage on Breif book" onclick="toJianShu();">
     </FORM>
 
     <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
-    <INPUT TYPE="button" value="伊豆的舞女" onclick="odoriko();">
+    <INPUT TYPE="button" value="The izu dancer" onclick="odoriko();">
     </FORM>
 
     <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
-    <INPUT TYPE="button" value="到此莫愁" onclick="mochouhu();">
+    <INPUT TYPE="button" value="Place without sorrow" onclick="mochouhu();">
     </FORM>
 
     <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
-    <INPUT TYPE="button" value="乌衣巷" onclick="wuyixiang();">
+    <INPUT TYPE="button" value="Wuyi Lane" onclick="wuyixiang();">
     </FORM>
 
     <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
-    <INPUT TYPE="button" value="南京鸭名吃" onclick="yazi();">
+    <INPUT TYPE="button" value="Duck & Nanjing" onclick="yazi();">
     </FORM>
   </div>
 
   <hr>
   </hr>
-  摄影作品
+  Photographic works
   <div id="article">
-    <img src="{{ url_for('static', filename= './images/大隈重信.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人劫持了～～"/>
+    <img src="{{ url_for('static', filename= './images/大隈重信.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
-    <img src="{{ url_for('static', filename= './images/资.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+    <img src="{{ url_for('static', filename= './images/资.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
-    <img src="{{ url_for('static', filename= './images/群马的山.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+    <img src="{{ url_for('static', filename= './images/群马的山.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
-<img src="{{ url_for('static', filename= './images/秋明湖.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/秋明湖.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 <!--
-<img src="{{ url_for('static', filename= './images/花.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/花.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 -->
-<img src="{{ url_for('static', filename= './images/海边.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/海边.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 <!--
-<img src="{{ url_for('static', filename= './images/光影3.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/光影3.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 -->
-<img src="{{ url_for('static', filename= './images/光影.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/光影.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 
-<img src="{{ url_for('static', filename= './images/光影2.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/光影2.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 <!--
-<img src="{{ url_for('static', filename= './images/车站.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/车站.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 -->
-<img src="{{ url_for('static', filename= './images/车站影.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/车站影.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
-<img src="{{ url_for('static', filename= './images/我的照片.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/我的照片.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 
-<img src="{{ url_for('static', filename= './images/雪板.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/雪板.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 <!--
-<img src="{{ url_for('static', filename= './images/雪道.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/雪道.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 -->
-<img src="{{ url_for('static', filename= './images/IPS2楼.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
+<img src="{{ url_for('static', filename= './images/IPS2楼.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="Your picture was hijacked by aliens."/>
     </img>
 
 
