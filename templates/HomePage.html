@@ -134,10 +134,7 @@ function singleLinkList(){
 
 
   <center>
-  <!--
-  <a href="{{ url_for('static', filename= './doc/颜仕清-简历.docx',_t=val1) }}" download="颜仕清-简历.docx">下载我的简历</a>
-  -->
-  <a href="{{ url_for('static', filename= './doc/颜仕清-简历.docx',_t=val1) }}" >下载我的简历</a>
+    <a href="{{ url_for('static', filename= './doc/颜仕清-简历.docx',_t=val1) }}" download="颜仕清-简历.docx">下载我的简历</a>
   </center>
 
 </aside>
@@ -192,14 +189,17 @@ function singleLinkList(){
     <INPUT TYPE="button" value="多线程" onclick="multiThread();">
     </FORM>
     
-    <FORM METHOD=POST ACTION="" name="frm1">
+    <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
     <INPUT TYPE="button" value="virtual关键字作用解析" onclick="keywordVirtual();">
     </FORM>
     
-    <FORM METHOD=POST ACTION="" name="frm1">
+    <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
     <INPUT TYPE="button" value="单链表" onclick="singleLinkList();">
     </FORM>
     
+    <FORM METHOD=POST ACTION="" name="frm1" class="div-inline">
+    <INPUT TYPE="button" value="单链表" onclick="singleLinkList();">
+    </FORM>
   </div>
 
   <hr>
