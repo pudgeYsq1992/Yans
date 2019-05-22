@@ -134,7 +134,10 @@ function singleLinkList(){
 
 
   <center>
+  <!--
   <a href="{{ url_for('static', filename= './doc/颜仕清-简历.docx',_t=val1) }}" download="颜仕清-简历.docx">下载我的简历</a>
+  -->
+  <a href="{{ url_for('static', filename= './doc/颜仕清-简历.docx',_t=val1) }}" >下载我的简历</a>
   </center>
 
 </aside>
@@ -201,10 +204,12 @@ function singleLinkList(){
 
   <hr>
   </hr>
-  摄影作品
+  <!--
   <div id="article">
+  摄影作品
     <img src="{{ url_for('static', filename= './images/大隈重信.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人劫持了～～"/>
     </img>
+    
     <img src="{{ url_for('static', filename= './images/资.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
@@ -214,6 +219,8 @@ function singleLinkList(){
 <img src="{{ url_for('static', filename= './images/秋明湖.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
+   
+    
 <!--
 <img src="{{ url_for('static', filename= './images/花.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
@@ -260,6 +267,7 @@ function singleLinkList(){
 
 
   </div>
+  
 
 <!--
       <div id="article"; width="200px" ;height="200px"; style="position:relative; left:"400px"; top:"500px"; float:left; ">
