@@ -15,6 +15,8 @@ import numpy as np
 import operator
 import string
 
+#自然语言处理部分
+import snownlp
 
 
 def outputByChinese(outputArray,sess):
@@ -30,6 +32,21 @@ def outputByChinese(outputArray,sess):
         return 4        
 
 app = Flask(__name__)
+
+@app.route('/nlpText/<Text>',methods=['GET','POST'])
+def NLPtext(Text):
+    print(Text)
+    s = SnowNLP(Text)
+    if s.sentiments >= 0.5:
+        return  json.dumps(
+            "你很友善,朋友,欢迎你!"
+        )
+    else :
+        return  json.dumps(
+            "别这么粗鲁嘛.兄台!"
+        )
+
+
 
 @app.route('/vedio/<vedio>')
 def stream_mp4(vedio):

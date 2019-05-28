@@ -92,6 +92,13 @@ function techSaction(){
         window.location.href=strChr;
 }
 
+function inputNLP(){
+        var text = document.getElementById("text").value;
+        strChr = 'http://47.101.152.193/nlpText/'+text;
+        window.location.href=strChr;
+
+}
+
 //-->
 </SCRIPT>
 <BODY>
@@ -212,6 +219,13 @@ function techSaction(){
 
   <hr>
   </hr>
+
+<div id="communicate">
+    <FORM METHOD=POST ACTION="" name="frm1">
+        <input type="text" id="text" name="text">
+        <input type="button" id="button" value="submit" onclick="inputNLP()">
+    </FORM>
+</div>
   <!--
   <div id="article">
   摄影作品
@@ -229,19 +243,17 @@ function techSaction(){
     </img>
    
     
-<!--
-<img src="{{ url_for('static', filename= './images/花.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
-劫持了～～"/>
-    </img>
--->
 <img src="{{ url_for('static', filename= './images/海边.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
+-->
 <!--
 <img src="{{ url_for('static', filename= './images/光影3.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
 -->
+
+<!--
 <img src="{{ url_for('static', filename= './images/光影.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
@@ -249,11 +261,12 @@ function techSaction(){
 <img src="{{ url_for('static', filename= './images/光影2.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
-<!--
+
 <img src="{{ url_for('static', filename= './images/车站.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
 -->
+<!--
 <img src="{{ url_for('static', filename= './images/车站影.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
@@ -264,11 +277,12 @@ function techSaction(){
 <img src="{{ url_for('static', filename= './images/雪板.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
-<!--
+
 <img src="{{ url_for('static', filename= './images/雪道.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
 -->
+<!--
 <img src="{{ url_for('static', filename= './images/IPS2楼.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
 劫持了～～"/>
     </img>
@@ -276,13 +290,13 @@ function techSaction(){
 
   </div>
   
-
-<!--
       <div id="article"; width="200px" ;height="200px"; style="position:relative; left:"400px"; top:"500px"; float:left; ">
         <video src="{{url_for('static',filename = './vedio/取针器.mp4')}}"; width="200px" ;height="200px" ; controls="controls">
         </video>
       </div>
 -->
+
+
 </article>
 
 <footer>
