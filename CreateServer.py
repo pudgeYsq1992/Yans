@@ -33,6 +33,10 @@ def outputByChinese(outputArray,sess):
 
 app = Flask(__name__)
 
+@app.route('/MagiRock', methods=['GET'])
+def home():
+    return render_template("MagiRock.html")
+
 @app.route('/nlpText/<Text>',methods=['GET','POST'])
 def NLPtext(Text):
     return  json.dumps(

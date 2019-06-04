@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<TITLE>Yan's personal Website</TITLE>
+<STYLE>
+.div-inline{display:inline}
+body{
+		height:1000px;
+	}
+	header{
+		width:100%;
+		background:#33FFCC;
+		height:10%
+	}
+	aside{
+		width:15%;
+		background:#00CCFF;
+		height:80%;
+		float:left
+	}
+
+	article{
+		width:85%;
+		background:#FFFFF0;
+		height:80%;
+		float:left
+	}
+        
+	footer{
+		width:100%;
+		background:#CC99FF;
+		height:10%;
+		float:left
+        }
+
+</STYLE>
+</HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function chkacc(){
+        strChr = 'http://47.101.152.193/JobPreference';
+        window.location.href=strChr; 
+}
+
+
+//-->
+</SCRIPT>
+<BODY>
+<header>
+
+</header>
+
+<aside>
+ 
+
+</aside>
+
+<article>
+    <img src="{{ url_for('static', filename= './魔岩/1.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+         劫持了～～"/>
+    </img>
+    <img src="{{ url_for('static', filename= './魔岩/2.jpg',_t=val1) }}"; width=200px ;height=200px ; alt="你的图片被外星>人
+         劫持了～～"/>
+    </img>
+</article>
+
+<footer>
+<!--
+  <audio controls="controls" autoplay="autoplay">
+  <source src="{{url_for('static',filename = './audio/SleepAway.mp3')}}"  />
+  Your browser does not support the audio element.
+</audio>
+-->
+</footer>
+
+</BODY>
+</HTML>
